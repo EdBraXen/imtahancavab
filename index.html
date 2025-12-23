@@ -4,16 +4,12 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C++ Quiz (VS Code Style)</title>
-    <script src="./realson_files/saved_resource"></script><style type="text/css" id="operaUserStyle">
-  video {
-    filter: -opera-shader(url(data:text/plain;base64,Ly8gaHR0cHM6Ly9naXRodWIuY29tL0dQVU9wZW4tRWZmZWN0cy9GaWRlbGl0eUZYLUNBUwovLyB2MwoKdW5pZm9ybSBzaGFkZXIgaUNodW5rOwp1bmlmb3JtIGZsb2F0MiBpQ2h1bmtTaXplOwp1bmlmb3JtIGZsb2F0MiBpTW91c2U7CnVuaWZvcm0gZmxvYXQgaUFyZ3NbMV07Cgpjb25zdCBmbG9hdCBFUFNJT04gPSAwLjE7CmNvbnN0IGZsb2F0IFZfTUlOID0gMDsKY29uc3QgZmxvYXQgVl9MT1cgPSAwLjI1Owpjb25zdCBmbG9hdCBWX01FRCA9IDAuNTsKY29uc3QgZmxvYXQgVl9ISUdIID0gMC43NTsKY29uc3QgZmxvYXQgVl9NQVggPSAxOwoKY29uc3QgZmxvYXQgVEhSRVNIT0xEX0FSRUEgPSA4MDAgKiA2MDA7CmNvbnN0IGZsb2F0IE1JTl9BUkVBID0gNDAwICogMTAwOwpjb25zdCBmbG9hdCBNSU5fU1RSSVAgPSAyMDsKY29uc3QgZmxvYXQgTUFSR0lOID0gMTsKCmZsb2F0MyBwaXhlbChpbnQgeCwgaW50IHksIGZsb2F0MiB4eSkgewogICAgcmV0dXJuIGlDaHVuay5ldmFsKHh5ICsgZmxvYXQyKHgsIHkpKS5yZ2I7Cn0KCmZsb2F0MyBzaGFycGVuKGZsb2F0MiB4eSkgewogICAgZmxvYXQzIGYgPQogICAgICAgIHBpeGVsKC0xLCAtMSwgeHkpICogIDEgKwogICAgICAgIHBpeGVsKCAwLCAtMSwgeHkpICogLTEgKwogICAgICAgIHBpeGVsKCAxLCAtMSwgeHkpICogIDEgKwoKICAgICAgICBwaXhlbCgtMSwgMCwgeHkpICogLTEgICsKICAgICAgICBwaXhlbCggMCwgMCwgeHkpICogLTEgICsKICAgICAgICBwaXhlbCggMSwgMCwgeHkpICogLTEgICsKCiAgICAgICAgcGl4ZWwoLTEsIDEsIHh5KSAqIDEgICArCiAgICAgICAgcGl4ZWwoIDAsIDEsIHh5KSAqIC0xICArCiAgICAgICAgcGl4ZWwoIDEsIDEsIHh5KSAqIDE7CiAgICByZXR1cm4gZiAvIC0xOwp9CgpmbG9hdDQgUkdYMihmbG9hdDIgeHkpIHsKICAgIGZsb2F0NCBjb2xvciA9IGlDaHVuay5ldmFsKHh5KTsKCiAgICBpZiAoaUNodW5rU2l6ZS54ICogaUNodW5rU2l6ZS55IDwgTUlOX0FSRUEpIHsKICAgICAgICByZXR1cm4gY29sb3I7CiAgICB9CgogICAgaWYgKGlDaHVua1NpemUueSA8IE1JTl9TVFJJUCB8fCBpQ2h1bmtTaXplLnggPCBNSU5fU1RSSVApIHsKICAgICAgICByZXR1cm4gY29sb3I7CiAgICB9CgogICAgaWYgKHh5LnggPCBNQVJHSU4gfHwgeHkueCA+IChpQ2h1bmtTaXplLnggLSBNQVJHSU4pIHx8CiAgICAgICAgeHkueSA8IE1BUkdJTiB8fCB4eS55ID4gKGlDaHVua1NpemUueSAtIE1BUkdJTikpIHsKICAgICAgICByZXR1cm4gY29sb3I7CiAgICB9CgogICAgcmV0dXJuIGZsb2F0NChzaGFycGVuKHh5KSwgMSk7Cn0KCmZsb2F0IG1pbjMoZmxvYXQgeCwgZmxvYXQgeSwgZmxvYXQgeikgewogICAgcmV0dXJuIG1pbih4LCBtaW4oeSwgeikpOwp9CgpmbG9hdCBtYXgzKGZsb2F0IHgsIGZsb2F0IHksIGZsb2F0IHopIHsKICAgIHJldHVybiBtYXgoeCwgbWF4KHksIHopKTsKfQoKZmxvYXQgcmNwKGZsb2F0IHYpIHsKICAgIHJldHVybiAxIC8gdjsKfQoKZmxvYXQzIFJHWDMoZmxvYXQyIHh5LCBmbG9hdCBzdHJlbmd0aCkgewogICAgZmxvYXQzIGEgPSBwaXhlbCgtMSwgLTEsIHh5KTsKICAgIGZsb2F0MyBiID0gcGl4ZWwoIDAsIC0xLCB4eSk7CiAgICBmbG9hdDMgYyA9IHBpeGVsKCAxLCAtMSwgeHkpOwoKICAgIGZsb2F0MyBkID0gcGl4ZWwoLTEsIDAsIHh5KTsKICAgIGZsb2F0MyBlID0gcGl4ZWwoIDAsIDAsIHh5KTsKICAgIGZsb2F0MyBmID0gcGl4ZWwoIDEsIDAsIHh5KTsKCiAgICBmbG9hdDMgZyA9IHBpeGVsKC0xLCAxLCB4eSk7CiAgICBmbG9hdDMgaCA9IHBpeGVsKCAwLCAxLCB4eSk7CiAgICBmbG9hdDMgaSA9IHBpeGVsKCAxLCAxLCB4eSk7CgogICAgZmxvYXQgbW5SID0gbWluMyhtaW4zKGQuciwgZS5yLCBmLnIpLCBiLnIsIGgucik7CiAgICBmbG9hdCBtbkcgPSBtaW4zKG1pbjMoZC5nLCBlLmcsIGYuZyksIGIuZywgaC5nKTsKICAgIGZsb2F0IG1uQiA9IG1pbjMobWluMyhkLmIsIGUuYiwgZi5iKSwgYi5iLCBoLmIpOwoKICAgIGZsb2F0IG1uUjIgPSBtaW4zKG1pbjMobW5SLCBhLnIsIGMuciksIGcuciwgaS5yKTsKICAgIGZsb2F0IG1uRzIgPSBtaW4zKG1pbjMobW5HLCBhLmcsIGMuZyksIGcuZywgaS5nKTsKICAgIGZsb2F0IG1uQjIgPSBtaW4zKG1pbjMobW5CLCBhLmIsIGMuYiksIGcuYiwgaS5iKTsKCiAgICBtblIgPSBtblIgKyBtblIyOwogICAgbW5HID0gbW5HICsgbW5HMjsKICAgIG1uQiA9IG1uQiArIG1uQjI7CgogICAgZmxvYXQgbXhSID0gbWF4MyhtYXgzKGQuciwgZS5yLCBmLnIpLCBiLnIsIGgucik7CiAgICBmbG9hdCBteEcgPSBtYXgzKG1heDMoZC5nLCBlLmcsIGYuZyksIGIuZywgaC5nKTsKICAgIGZsb2F0IG14QiA9IG1heDMobWF4MyhkLmIsIGUuYiwgZi5iKSwgYi5iLCBoLmIpOwoKICAgIGZsb2F0IG14UjIgPSBtYXgzKG1heDMobXhSLCBhLnIsIGMuciksIGcuciwgaS5yKTsKICAgIGZsb2F0IG14RzIgPSBtYXgzKG1heDMobXhHLCBhLmcsIGMuZyksIGcuZywgaS5nKTsKICAgIGZsb2F0IG14QjIgPSBtYXgzKG1heDMobXhCLCBhLmIsIGMuYiksIGcuYiwgaS5iKTsKCiAgICBteFIgPSBteFIgKyBteFIyOwogICAgbXhHID0gbXhHICsgbXhHMjsKICAgIG14QiA9IG14QiArIG14QjI7CgogICAgZmxvYXQgcmNwTVIgPSByY3AobXhSKTsKICAgIGZsb2F0IHJjcE1HID0gcmNwKG14Ryk7CiAgICBmbG9hdCByY3BNQiA9IHJjcChteEIpOwoKICAgIGZsb2F0IGFtcFIgPSBzYXR1cmF0ZShtaW4obW5SLCAyIC0gbXhSKSAqIHJjcE1SKTsKICAgIGZsb2F0IGFtcEcgPSBzYXR1cmF0ZShtaW4obW5HLCAyIC0gbXhHKSAqIHJjcE1HKTsKICAgIGZsb2F0IGFtcEIgPSBzYXR1cmF0ZShtaW4obW5CLCAyIC0gbXhCKSAqIHJjcE1CKTsKCiAgICBhbXBSID0gc3FydChhbXBSKTsKICAgIGFtcEcgPSBzcXJ0KGFtcEcpOwogICAgYW1wQiA9IHNxcnQoYW1wQik7CgogICAgZmxvYXQgcGVhayA9IC1yY3AobWl4KDgsIDUsIHN0cmVuZ3RoKSk7CgogICAgZmxvYXQgd1IgPSBhbXBSICogcGVhazsKICAgIGZsb2F0IHdHID0gYW1wRyAqIHBlYWs7CiAgICBmbG9hdCB3QiA9IGFtcEIgKiBwZWFrOwoKICAgIGZsb2F0IHJjcFdlaWdodFIgPSByY3AoMSArIDQgKiB3Uik7CiAgICBmbG9hdCByY3BXZWlnaHRHID0gcmNwKDEgKyA0ICogd0cpOwogICAgZmxvYXQgcmNwV2VpZ2h0QiA9IHJjcCgxICsgNCAqIHdCKTsKCiAgICByZXR1cm4gZmxvYXQzKAogICAgICAgIHNhdHVyYXRlKChiLnIgKiB3UiArIGQuciAqIHdSICsgZi5yICogd1IgKyBoLnIgKiB3UiArIGUucikgKiByY3BXZWlnaHRSKSwKICAgICAgICBzYXR1cmF0ZSgoYi5nICogd0cgKyBkLmcgKiB3RyArIGYuZyAqIHdHICsgaC5nICogd0cgKyBlLmcpICogcmNwV2VpZ2h0RyksCiAgICAgICAgc2F0dXJhdGUoKGIuYiAqIHdCICsgZC5iICogd0IgKyBmLmIgKiB3QiArIGguYiAqIHdCICsgZS5iKSAqIHJjcFdlaWdodEIpKTsKfQoKCmZsb2F0NCBtYWluKGZsb2F0MiB4eSkgewoKICAgIGZsb2F0NCBvcmlnaW5hbENvbG9yID0gaUNodW5rLmV2YWwoeHkpOwogICAgaWYgKG9yaWdpbmFsQ29sb3IuYSA8IDEpIHsKICAgICAgICByZXR1cm4gaUNodW5rLmV2YWwoeHkpOwogICAgfQoKICAgIGZsb2F0IGludGVuc2l0eSA9IGlBcmdzWzBdOwogICAgZmxvYXQgc3RyZW5ndGggPSAwOwogICAgZmxvYXQzIGNvbG9yOwoKICAgIGlmIChpbnRlbnNpdHkgPCBWX01JTiArIEVQU0lPTikgewogICAgICAgIHN0cmVuZ3RoID0gMC4xMDsKICAgICAgICBjb2xvciA9IFJHWDMoeHksIHN0cmVuZ3RoKTsKCiAgICB9IGVsc2UgaWYgKGludGVuc2l0eSA+IFZfTE9XIC0gRVBTSU9OICYmIGludGVuc2l0eSA8IFZfTE9XICsgRVBTSU9OKSB7CiAgICAgICAgc3RyZW5ndGggPSAwLjMzOwogICAgICAgIGNvbG9yID0gUkdYMyh4eSwgc3RyZW5ndGgpOwoKICAgIH0gZWxzZSBpZiAoaW50ZW5zaXR5ID4gVl9NRUQgLSBFUFNJT04gJiYgaW50ZW5zaXR5IDwgVl9NRUQgKyBFUFNJT04pIHsKICAgICAgICBzdHJlbmd0aCA9IDAuNTsKICAgICAgICBjb2xvciA9IFJHWDMoeHksIHN0cmVuZ3RoKTsKCiAgICB9IGVsc2UgaWYgKGludGVuc2l0eSA+IFZfSElHSCAtIEVQU0lPTiAmJiBpbnRlbnNpdHkgPCBWX0hJR0ggKyBFUFNJT04pIHsKICAgICAgICBzdHJlbmd0aCA9IDAuOTk7CiAgICAgICAgY29sb3IgPSBSR1gzKHh5LCBzdHJlbmd0aCk7CgogICAgfSBlbHNlIGlmIChpbnRlbnNpdHkgPiBWX01BWCAtIEVQU0lPTikgewogICAgICAgIHN0cmVuZ3RoID0gMTsKICAgICAgICBjb2xvciA9IFJHWDIoeHkpLnJnYjsKICAgIH0KCiAgICByZXR1cm4gZmxvYXQ0KGNvbG9yLCBvcmlnaW5hbENvbG9yLmEpOwp9) -opera-args(0.75 calc(env(-opera-accent-color-r, 255)/255) calc(env(-opera-accent-color-g, 255)/255) calc(env(-opera-accent-color-b, 255)/255)));
-  }
-</style>
-    <script src="./realson_files/papaparse.min.js.download"></script>
+    <script src="./realsonreal_files/saved_resource"></script>
+    <script src="./realsonreal_files/papaparse.min.js.download"></script>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css">
-    <script src="./realson_files/highlight.min.js.download"></script>
-    <script src="./realson_files/cpp.min.js.download"></script>
+    <script src="./realsonreal_files/highlight.min.js.download"></script>
+    <script src="./realsonreal_files/cpp.min.js.download"></script>
 
     <style>
         pre { white-space: pre-wrap; word-wrap: break-word; }
@@ -29,7 +25,11 @@
         /* Kod sahəsinin fontu */
         code { font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important; font-size: 13px !important; line-height: 1.5 !important; }
     </style>
-<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.m-0{margin:0px}.mx-auto{margin-left:auto;margin-right:auto}.mb-8{margin-bottom:2rem}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mt-2{margin-top:0.5rem}.mt-4{margin-top:1rem}.mt-8{margin-top:2rem}.mb-5{margin-bottom:1.25rem}.ml-3{margin-left:0.75rem}.mr-2{margin-right:0.5rem}.block{display:block}.flex{display:flex}.hidden{display:none}.h-3{height:0.75rem}.h-5{height:1.25rem}.min-h-screen{min-height:100vh}.w-full{width:100%}.w-3{width:0.75rem}.w-5{width:1.25rem}.max-w-4xl{max-width:56rem}.flex-1{flex:1 1 0%}.rotate-180{--tw-rotate:180deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;user-select:none}.items-center{align-items:center}.justify-between{justify-content:space-between}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.whitespace-pre-line{white-space:pre-line}.rounded{border-radius:0.25rem}.rounded-lg{border-radius:0.5rem}.rounded-full{border-radius:9999px}.rounded-md{border-radius:0.375rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-blue-200{--tw-border-opacity:1;border-color:rgb(191 219 254 / var(--tw-border-opacity, 1))}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-\[\#333333\]{--tw-border-opacity:1;border-color:rgb(51 51 51 / var(--tw-border-opacity, 1))}.border-gray-700{--tw-border-opacity:1;border-color:rgb(55 65 81 / var(--tw-border-opacity, 1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-red-100{--tw-bg-opacity:1;background-color:rgb(254 226 226 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.\!bg-\[\#1e1e1e\]{--tw-bg-opacity:1 !important;background-color:rgb(30 30 30 / var(--tw-bg-opacity, 1)) !important}.bg-\[\#1e1e1e\]{--tw-bg-opacity:1;background-color:rgb(30 30 30 / var(--tw-bg-opacity, 1))}.bg-\[\#252526\]{--tw-bg-opacity:1;background-color:rgb(37 37 38 / var(--tw-bg-opacity, 1))}.bg-\[\#27c93f\]{--tw-bg-opacity:1;background-color:rgb(39 201 63 / var(--tw-bg-opacity, 1))}.bg-\[\#ff5f56\]{--tw-bg-opacity:1;background-color:rgb(255 95 86 / var(--tw-bg-opacity, 1))}.bg-\[\#ffbd2e\]{--tw-bg-opacity:1;background-color:rgb(255 189 46 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-6{padding:1.5rem}.\!p-4{padding:1rem !important}.p-4{padding:1rem}.p-5{padding:1.25rem}.px-4{padding-left:1rem;padding-right:1rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.text-center{text-align:center}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.font-sans{font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-blue-800{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74 / var(--tw-text-opacity, 1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-200{transition-duration:200ms}.file\:mr-4::file-selector-button{margin-right:1rem}.file\:rounded-full::file-selector-button{border-radius:9999px}.file\:border-0::file-selector-button{border-width:0px}.file\:bg-blue-50::file-selector-button{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.file\:px-4::file-selector-button{padding-left:1rem;padding-right:1rem}.file\:py-2::file-selector-button{padding-top:0.5rem;padding-bottom:0.5rem}.file\:text-blue-700::file-selector-button{--tw-text-opacity:1;color:rgb(29 78 216 / var(--tw-text-opacity, 1))}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:bg-red-200:hover{--tw-bg-opacity:1;background-color:rgb(254 202 202 / var(--tw-bg-opacity, 1))}.hover\:bg-blue-50:hover{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.hover\:file\:bg-blue-100::file-selector-button:hover{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}</style><style type="text/css"></style></head>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.m-0{margin:0px}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-2{margin-top:0.5rem}.mt-4{margin-top:1rem}.mt-8{margin-top:2rem}.mb-5{margin-bottom:1.25rem}.ml-3{margin-left:0.75rem}.mr-2{margin-right:0.5rem}.block{display:block}.flex{display:flex}.hidden{display:none}.h-3{height:0.75rem}.h-5{height:1.25rem}.min-h-screen{min-height:100vh}.w-full{width:100%}.w-3{width:0.75rem}.w-5{width:1.25rem}.max-w-4xl{max-width:56rem}.flex-1{flex:1 1 0%}.rotate-180{--tw-rotate:180deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;user-select:none}.items-center{align-items:center}.justify-between{justify-content:space-between}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.whitespace-pre-line{white-space:pre-line}.rounded{border-radius:0.25rem}.rounded-lg{border-radius:0.5rem}.rounded-full{border-radius:9999px}.rounded-md{border-radius:0.375rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-blue-200{--tw-border-opacity:1;border-color:rgb(191 219 254 / var(--tw-border-opacity, 1))}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-\[\#333333\]{--tw-border-opacity:1;border-color:rgb(51 51 51 / var(--tw-border-opacity, 1))}.border-gray-700{--tw-border-opacity:1;border-color:rgb(55 65 81 / var(--tw-border-opacity, 1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-red-100{--tw-bg-opacity:1;background-color:rgb(254 226 226 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.\!bg-\[\#1e1e1e\]{--tw-bg-opacity:1 !important;background-color:rgb(30 30 30 / var(--tw-bg-opacity, 1)) !important}.bg-\[\#1e1e1e\]{--tw-bg-opacity:1;background-color:rgb(30 30 30 / var(--tw-bg-opacity, 1))}.bg-\[\#252526\]{--tw-bg-opacity:1;background-color:rgb(37 37 38 / var(--tw-bg-opacity, 1))}.bg-\[\#27c93f\]{--tw-bg-opacity:1;background-color:rgb(39 201 63 / var(--tw-bg-opacity, 1))}.bg-\[\#ff5f56\]{--tw-bg-opacity:1;background-color:rgb(255 95 86 / var(--tw-bg-opacity, 1))}.bg-\[\#ffbd2e\]{--tw-bg-opacity:1;background-color:rgb(255 189 46 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-6{padding:1.5rem}.\!p-4{padding:1rem !important}.p-4{padding:1rem}.p-5{padding:1.25rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.px-4{padding-left:1rem;padding-right:1rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.text-center{text-align:center}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.font-sans{font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.text-blue-800{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74 / var(--tw-text-opacity, 1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-200{transition-duration:200ms}.file\:mr-4::file-selector-button{margin-right:1rem}.file\:rounded-full::file-selector-button{border-radius:9999px}.file\:border-0::file-selector-button{border-width:0px}.file\:bg-blue-50::file-selector-button{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.file\:px-4::file-selector-button{padding-left:1rem;padding-right:1rem}.file\:py-2::file-selector-button{padding-top:0.5rem;padding-bottom:0.5rem}.file\:text-blue-700::file-selector-button{--tw-text-opacity:1;color:rgb(29 78 216 / var(--tw-text-opacity, 1))}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:bg-red-200:hover{--tw-bg-opacity:1;background-color:rgb(254 202 202 / var(--tw-bg-opacity, 1))}.hover\:bg-blue-50:hover{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.hover\:file\:bg-blue-100::file-selector-button:hover{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}</style><style type="text/css" id="operaUserStyle">
+  video {
+    filter: -opera-shader(url(data:text/plain;base64,Ly8gaHR0cHM6Ly9naXRodWIuY29tL0dQVU9wZW4tRWZmZWN0cy9GaWRlbGl0eUZYLUNBUwovLyB2MwoKdW5pZm9ybSBzaGFkZXIgaUNodW5rOwp1bmlmb3JtIGZsb2F0MiBpQ2h1bmtTaXplOwp1bmlmb3JtIGZsb2F0MiBpTW91c2U7CnVuaWZvcm0gZmxvYXQgaUFyZ3NbMV07Cgpjb25zdCBmbG9hdCBFUFNJT04gPSAwLjE7CmNvbnN0IGZsb2F0IFZfTUlOID0gMDsKY29uc3QgZmxvYXQgVl9MT1cgPSAwLjI1Owpjb25zdCBmbG9hdCBWX01FRCA9IDAuNTsKY29uc3QgZmxvYXQgVl9ISUdIID0gMC43NTsKY29uc3QgZmxvYXQgVl9NQVggPSAxOwoKY29uc3QgZmxvYXQgVEhSRVNIT0xEX0FSRUEgPSA4MDAgKiA2MDA7CmNvbnN0IGZsb2F0IE1JTl9BUkVBID0gNDAwICogMTAwOwpjb25zdCBmbG9hdCBNSU5fU1RSSVAgPSAyMDsKY29uc3QgZmxvYXQgTUFSR0lOID0gMTsKCmZsb2F0MyBwaXhlbChpbnQgeCwgaW50IHksIGZsb2F0MiB4eSkgewogICAgcmV0dXJuIGlDaHVuay5ldmFsKHh5ICsgZmxvYXQyKHgsIHkpKS5yZ2I7Cn0KCmZsb2F0MyBzaGFycGVuKGZsb2F0MiB4eSkgewogICAgZmxvYXQzIGYgPQogICAgICAgIHBpeGVsKC0xLCAtMSwgeHkpICogIDEgKwogICAgICAgIHBpeGVsKCAwLCAtMSwgeHkpICogLTEgKwogICAgICAgIHBpeGVsKCAxLCAtMSwgeHkpICogIDEgKwoKICAgICAgICBwaXhlbCgtMSwgMCwgeHkpICogLTEgICsKICAgICAgICBwaXhlbCggMCwgMCwgeHkpICogLTEgICsKICAgICAgICBwaXhlbCggMSwgMCwgeHkpICogLTEgICsKCiAgICAgICAgcGl4ZWwoLTEsIDEsIHh5KSAqIDEgICArCiAgICAgICAgcGl4ZWwoIDAsIDEsIHh5KSAqIC0xICArCiAgICAgICAgcGl4ZWwoIDEsIDEsIHh5KSAqIDE7CiAgICByZXR1cm4gZiAvIC0xOwp9CgpmbG9hdDQgUkdYMihmbG9hdDIgeHkpIHsKICAgIGZsb2F0NCBjb2xvciA9IGlDaHVuay5ldmFsKHh5KTsKCiAgICBpZiAoaUNodW5rU2l6ZS54ICogaUNodW5rU2l6ZS55IDwgTUlOX0FSRUEpIHsKICAgICAgICByZXR1cm4gY29sb3I7CiAgICB9CgogICAgaWYgKGlDaHVua1NpemUueSA8IE1JTl9TVFJJUCB8fCBpQ2h1bmtTaXplLnggPCBNSU5fU1RSSVApIHsKICAgICAgICByZXR1cm4gY29sb3I7CiAgICB9CgogICAgaWYgKHh5LnggPCBNQVJHSU4gfHwgeHkueCA+IChpQ2h1bmtTaXplLnggLSBNQVJHSU4pIHx8CiAgICAgICAgeHkueSA8IE1BUkdJTiB8fCB4eS55ID4gKGlDaHVua1NpemUueSAtIE1BUkdJTikpIHsKICAgICAgICByZXR1cm4gY29sb3I7CiAgICB9CgogICAgcmV0dXJuIGZsb2F0NChzaGFycGVuKHh5KSwgMSk7Cn0KCmZsb2F0IG1pbjMoZmxvYXQgeCwgZmxvYXQgeSwgZmxvYXQgeikgewogICAgcmV0dXJuIG1pbih4LCBtaW4oeSwgeikpOwp9CgpmbG9hdCBtYXgzKGZsb2F0IHgsIGZsb2F0IHksIGZsb2F0IHopIHsKICAgIHJldHVybiBtYXgoeCwgbWF4KHksIHopKTsKfQoKZmxvYXQgcmNwKGZsb2F0IHYpIHsKICAgIHJldHVybiAxIC8gdjsKfQoKZmxvYXQzIFJHWDMoZmxvYXQyIHh5LCBmbG9hdCBzdHJlbmd0aCkgewogICAgZmxvYXQzIGEgPSBwaXhlbCgtMSwgLTEsIHh5KTsKICAgIGZsb2F0MyBiID0gcGl4ZWwoIDAsIC0xLCB4eSk7CiAgICBmbG9hdDMgYyA9IHBpeGVsKCAxLCAtMSwgeHkpOwoKICAgIGZsb2F0MyBkID0gcGl4ZWwoLTEsIDAsIHh5KTsKICAgIGZsb2F0MyBlID0gcGl4ZWwoIDAsIDAsIHh5KTsKICAgIGZsb2F0MyBmID0gcGl4ZWwoIDEsIDAsIHh5KTsKCiAgICBmbG9hdDMgZyA9IHBpeGVsKC0xLCAxLCB4eSk7CiAgICBmbG9hdDMgaCA9IHBpeGVsKCAwLCAxLCB4eSk7CiAgICBmbG9hdDMgaSA9IHBpeGVsKCAxLCAxLCB4eSk7CgogICAgZmxvYXQgbW5SID0gbWluMyhtaW4zKGQuciwgZS5yLCBmLnIpLCBiLnIsIGgucik7CiAgICBmbG9hdCBtbkcgPSBtaW4zKG1pbjMoZC5nLCBlLmcsIGYuZyksIGIuZywgaC5nKTsKICAgIGZsb2F0IG1uQiA9IG1pbjMobWluMyhkLmIsIGUuYiwgZi5iKSwgYi5iLCBoLmIpOwoKICAgIGZsb2F0IG1uUjIgPSBtaW4zKG1pbjMobW5SLCBhLnIsIGMuciksIGcuciwgaS5yKTsKICAgIGZsb2F0IG1uRzIgPSBtaW4zKG1pbjMobW5HLCBhLmcsIGMuZyksIGcuZywgaS5nKTsKICAgIGZsb2F0IG1uQjIgPSBtaW4zKG1pbjMobW5CLCBhLmIsIGMuYiksIGcuYiwgaS5iKTsKCiAgICBtblIgPSBtblIgKyBtblIyOwogICAgbW5HID0gbW5HICsgbW5HMjsKICAgIG1uQiA9IG1uQiArIG1uQjI7CgogICAgZmxvYXQgbXhSID0gbWF4MyhtYXgzKGQuciwgZS5yLCBmLnIpLCBiLnIsIGgucik7CiAgICBmbG9hdCBteEcgPSBtYXgzKG1heDMoZC5nLCBlLmcsIGYuZyksIGIuZywgaC5nKTsKICAgIGZsb2F0IG14QiA9IG1heDMobWF4MyhkLmIsIGUuYiwgZi5iKSwgYi5iLCBoLmIpOwoKICAgIGZsb2F0IG14UjIgPSBtYXgzKG1heDMobXhSLCBhLnIsIGMuciksIGcuciwgaS5yKTsKICAgIGZsb2F0IG14RzIgPSBtYXgzKG1heDMobXhHLCBhLmcsIGMuZyksIGcuZywgaS5nKTsKICAgIGZsb2F0IG14QjIgPSBtYXgzKG1heDMobXhCLCBhLmIsIGMuYiksIGcuYiwgaS5iKTsKCiAgICBteFIgPSBteFIgKyBteFIyOwogICAgbXhHID0gbXhHICsgbXhHMjsKICAgIG14QiA9IG14QiArIG14QjI7CgogICAgZmxvYXQgcmNwTVIgPSByY3AobXhSKTsKICAgIGZsb2F0IHJjcE1HID0gcmNwKG14Ryk7CiAgICBmbG9hdCByY3BNQiA9IHJjcChteEIpOwoKICAgIGZsb2F0IGFtcFIgPSBzYXR1cmF0ZShtaW4obW5SLCAyIC0gbXhSKSAqIHJjcE1SKTsKICAgIGZsb2F0IGFtcEcgPSBzYXR1cmF0ZShtaW4obW5HLCAyIC0gbXhHKSAqIHJjcE1HKTsKICAgIGZsb2F0IGFtcEIgPSBzYXR1cmF0ZShtaW4obW5CLCAyIC0gbXhCKSAqIHJjcE1CKTsKCiAgICBhbXBSID0gc3FydChhbXBSKTsKICAgIGFtcEcgPSBzcXJ0KGFtcEcpOwogICAgYW1wQiA9IHNxcnQoYW1wQik7CgogICAgZmxvYXQgcGVhayA9IC1yY3AobWl4KDgsIDUsIHN0cmVuZ3RoKSk7CgogICAgZmxvYXQgd1IgPSBhbXBSICogcGVhazsKICAgIGZsb2F0IHdHID0gYW1wRyAqIHBlYWs7CiAgICBmbG9hdCB3QiA9IGFtcEIgKiBwZWFrOwoKICAgIGZsb2F0IHJjcFdlaWdodFIgPSByY3AoMSArIDQgKiB3Uik7CiAgICBmbG9hdCByY3BXZWlnaHRHID0gcmNwKDEgKyA0ICogd0cpOwogICAgZmxvYXQgcmNwV2VpZ2h0QiA9IHJjcCgxICsgNCAqIHdCKTsKCiAgICByZXR1cm4gZmxvYXQzKAogICAgICAgIHNhdHVyYXRlKChiLnIgKiB3UiArIGQuciAqIHdSICsgZi5yICogd1IgKyBoLnIgKiB3UiArIGUucikgKiByY3BXZWlnaHRSKSwKICAgICAgICBzYXR1cmF0ZSgoYi5nICogd0cgKyBkLmcgKiB3RyArIGYuZyAqIHdHICsgaC5nICogd0cgKyBlLmcpICogcmNwV2VpZ2h0RyksCiAgICAgICAgc2F0dXJhdGUoKGIuYiAqIHdCICsgZC5iICogd0IgKyBmLmIgKiB3QiArIGguYiAqIHdCICsgZS5iKSAqIHJjcFdlaWdodEIpKTsKfQoKCmZsb2F0NCBtYWluKGZsb2F0MiB4eSkgewoKICAgIGZsb2F0NCBvcmlnaW5hbENvbG9yID0gaUNodW5rLmV2YWwoeHkpOwogICAgaWYgKG9yaWdpbmFsQ29sb3IuYSA8IDEpIHsKICAgICAgICByZXR1cm4gaUNodW5rLmV2YWwoeHkpOwogICAgfQoKICAgIGZsb2F0IGludGVuc2l0eSA9IGlBcmdzWzBdOwogICAgZmxvYXQgc3RyZW5ndGggPSAwOwogICAgZmxvYXQzIGNvbG9yOwoKICAgIGlmIChpbnRlbnNpdHkgPCBWX01JTiArIEVQU0lPTikgewogICAgICAgIHN0cmVuZ3RoID0gMC4xMDsKICAgICAgICBjb2xvciA9IFJHWDMoeHksIHN0cmVuZ3RoKTsKCiAgICB9IGVsc2UgaWYgKGludGVuc2l0eSA+IFZfTE9XIC0gRVBTSU9OICYmIGludGVuc2l0eSA8IFZfTE9XICsgRVBTSU9OKSB7CiAgICAgICAgc3RyZW5ndGggPSAwLjMzOwogICAgICAgIGNvbG9yID0gUkdYMyh4eSwgc3RyZW5ndGgpOwoKICAgIH0gZWxzZSBpZiAoaW50ZW5zaXR5ID4gVl9NRUQgLSBFUFNJT04gJiYgaW50ZW5zaXR5IDwgVl9NRUQgKyBFUFNJT04pIHsKICAgICAgICBzdHJlbmd0aCA9IDAuNTsKICAgICAgICBjb2xvciA9IFJHWDMoeHksIHN0cmVuZ3RoKTsKCiAgICB9IGVsc2UgaWYgKGludGVuc2l0eSA+IFZfSElHSCAtIEVQU0lPTiAmJiBpbnRlbnNpdHkgPCBWX0hJR0ggKyBFUFNJT04pIHsKICAgICAgICBzdHJlbmd0aCA9IDAuOTk7CiAgICAgICAgY29sb3IgPSBSR1gzKHh5LCBzdHJlbmd0aCk7CgogICAgfSBlbHNlIGlmIChpbnRlbnNpdHkgPiBWX01BWCAtIEVQU0lPTikgewogICAgICAgIHN0cmVuZ3RoID0gMTsKICAgICAgICBjb2xvciA9IFJHWDIoeHkpLnJnYjsKICAgIH0KCiAgICByZXR1cm4gZmxvYXQ0KGNvbG9yLCBvcmlnaW5hbENvbG9yLmEpOwp9) -opera-args(0.75 calc(env(-opera-accent-color-r, 255)/255) calc(env(-opera-accent-color-g, 255)/255) calc(env(-opera-accent-color-b, 255)/255)));
+  }
+</style><style type="text/css"></style></head>
 <body class="bg-slate-100 min-h-screen py-10">
 
     <div class="max-w-4xl mx-auto px-4">
@@ -39,6 +39,7 @@
         </div>
         
         <div id="input-section" class="bg-white p-6 rounded-lg shadow-md border border-slate-200" style="display: none;">
+
             <div id="content-file">
                 <div class="text-center mb-4">
                     <label class="block text-sm text-slate-500 mb-1">Kodlaşdırma (Hərflər düz çıxmazsa dəyişin):</label>
@@ -46,6 +47,7 @@
                         <option value="Windows-1254" selected="">Windows-1254 (Azərbaycan)</option>
                         <option value="UTF-8">UTF-8 (Standart)</option>
                     </select>
+                    
                     <input type="file" id="csvFileInput" accept=".csv" class="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 cursor-pointer">
                 </div>
             </div>
@@ -60,7 +62,8 @@
 
         <div id="quiz-container" class="space-y-4 mt-8">
             <div class="bg-blue-50 p-3 rounded border border-blue-200 text-blue-800 text-sm mb-4 flex justify-between">
-                <span id="question-count" class="font-bold">Sual sayı: 58</span>
+                <span id="question-count" class="font-bold">Sual sayı: 57</span>
+                <span>Məlumat brauzer yaddaşından oxundu.</span>
             </div>
             <div id="cards-area">
                 <div class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden mb-4">
@@ -1921,60 +1924,7 @@ Məhdudiyyətlər
                 <div class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden mb-4">
                     <div class="bg-slate-50 p-4 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition select-none" onclick="toggleCard(this)">
                         <h3 class="font-bold text-slate-700">
-                            <span class="text-blue-600 mr-2">#32</span> Super Terminal
-                        </h3>
-                        <svg class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </div>
-                    <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
-                        <div class="mb-5">
-                            <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">Dəyişənlər (hamısı public):
-balance (int): Əsas balans.
-isBlocked (bool): Terminalın blokda olub-olmaması.
-wrongAttempts (int): Səhv parol cəhdlərinin sayı.
-isVIP (bool): İstifadəçinin VIP statusu.
-Qaydalar və Metodlar:
-Constructor: Balans 0, Blok yoxdur, VIP deyil, Səhv cəhd 0.
-enterPin(int code):
-Doğru kod: 1234.
-Əgər isBlocked true-dursa, heç nə etmir.
-Kod səhvdirsə: wrongAttempts artır. Əgər 3-ə çatsa, isBlocked = true olur.
-Kod düzdürsə: wrongAttempts sıfırlanır (blok açılmır, sadəcə sayğac sıfırlanır).
-deposit(int amount):
-Əgər isBlocked true-dursa, işləmir.
-Balansı artırır.
-makePayment(int amount):
-Əgər isBlocked true-dursa, işləmir.
-Komissiya qaydası: Əgər isVIP true-dursa komissiya 0, əks halda 2 manat.
-Ümumi çıxılacaq məbləğ (amount + komissiya) balansda varsa, çıxılır. Yoxdursa heç nə olmur.
-buyVip():
-Əgər isBlocked true və ya artıq isVIP true-dursa, işləmir.
-Qiyməti 100 manat. Balans çatırsa, pul çıxılır və isVIP = true olur.
-resetBlock(): (Texniki servis) Bloku açır (false), cəhdləri sıfırlayır.</p>
-                        </div>
-                        <div>
-                            <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
-                            
-                            <div class="vscode-window rounded-md overflow-hidden bg-[#1e1e1e] shadow-lg border border-gray-700">
-                                <div class="bg-[#252526] px-4 py-2 flex items-center gap-2 border-b border-[#333333]">
-                                    <div class="flex gap-1.5">
-                                        <div class="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
-                                        <div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
-                                        <div class="w-3 h-3 rounded-full bg-[#27c93f]"></div>
-                                    </div>
-                                    <span class="ml-3 text-xs text-gray-400 font-sans">solution.cpp</span>
-                                </div>
-                                <pre class="m-0 !bg-[#1e1e1e]"><code class="language-cpp !bg-[#1e1e1e] !p-4 block hljs" data-highlighted="yes"></code></pre>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden mb-4">
-                    <div class="bg-slate-50 p-4 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition select-none" onclick="toggleCard(this)">
-                        <h3 class="font-bold text-slate-700">
-                            <span class="text-blue-600 mr-2">#33</span> Şagird
+                            <span class="text-blue-600 mr-2">#32</span> Şagird
                         </h3>
                         <svg class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
@@ -2048,7 +1998,7 @@ Adını və yaşını ekrana çıxarın</p>
                 <div class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden mb-4">
                     <div class="bg-slate-50 p-4 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition select-none" onclick="toggleCard(this)">
                         <h3 class="font-bold text-slate-700">
-                            <span class="text-blue-600 mr-2">#34</span> Meyvə səbəti
+                            <span class="text-blue-600 mr-2">#33</span> Meyvə səbəti
                         </h3>
                         <svg class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
@@ -2107,7 +2057,7 @@ Nümunə: Əgər almaSayi 5, bananSayi 10, almaQiymeti 0.50, bananQiymeti 0.25 o
                 <div class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden mb-4">
                     <div class="bg-slate-50 p-4 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition select-none" onclick="toggleCard(this)">
                         <h3 class="font-bold text-slate-700">
-                            <span class="text-blue-600 mr-2">#35</span> Endirim Hesablanması
+                            <span class="text-blue-600 mr-2">#34</span> Endirim Hesablanması
                         </h3>
                         <svg class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
@@ -2171,7 +2121,7 @@ Nümunə: Əgər umumiMebleg 75.50 AZN olarsa, funksiya 0.05 (5%) qaytarmalıdı
                 <div class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden mb-4">
                     <div class="bg-slate-50 p-4 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition select-none" onclick="toggleCard(this)">
                         <h3 class="font-bold text-slate-700">
-                            <span class="text-blue-600 mr-2">#36</span> Ən qısa söz
+                            <span class="text-blue-600 mr-2">#35</span> Ən qısa söz
                         </h3>
                         <svg class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
@@ -2248,7 +2198,7 @@ Sətirdə yalnız hərflərdən və boşluqlardan istifadə olunur.</p>
                 <div class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden mb-4">
                     <div class="bg-slate-50 p-4 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition select-none" onclick="toggleCard(this)">
                         <h3 class="font-bold text-slate-700">
-                            <span class="text-blue-600 mr-2">#37</span> Ədədi Sözlə İfadə Et 
+                            <span class="text-blue-600 mr-2">#36</span> Ədədi Sözlə İfadə Et 
                         </h3>
                         <svg class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
@@ -2365,7 +2315,7 @@ Məhdudiyyətlər:
                 <div class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden mb-4">
                     <div class="bg-slate-50 p-4 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition select-none" onclick="toggleCard(this)">
                         <h3 class="font-bold text-slate-700">
-                            <span class="text-blue-600 mr-2">#38</span> Səkkizlik sistem
+                            <span class="text-blue-600 mr-2">#37</span> Səkkizlik sistem
                         </h3>
                         <svg class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
@@ -2472,7 +2422,7 @@ Cavab: 372</p>
                 <div class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden mb-4">
                     <div class="bg-slate-50 p-4 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition select-none" onclick="toggleCard(this)">
                         <h3 class="font-bold text-slate-700">
-                            <span class="text-blue-600 mr-2">#39</span> Pronik ədəd
+                            <span class="text-blue-600 mr-2">#38</span> Pronik ədəd
                         </h3>
                         <svg class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
@@ -2540,7 +2490,7 @@ Məhdudiyyətlər:
                 <div class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden mb-4">
                     <div class="bg-slate-50 p-4 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition select-none" onclick="toggleCard(this)">
                         <h3 class="font-bold text-slate-700">
-                            <span class="text-blue-600 mr-2">#40</span> Ilk təkrarlanmayan simvol
+                            <span class="text-blue-600 mr-2">#39</span> Ilk təkrarlanmayan simvol
                         </h3>
                         <svg class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
@@ -2628,7 +2578,7 @@ Sətir yalnız İngilis hərflərindən ibarət olacaq
                 <div class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden mb-4">
                     <div class="bg-slate-50 p-4 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition select-none" onclick="toggleCard(this)">
                         <h3 class="font-bold text-slate-700">
-                            <span class="text-blue-600 mr-2">#41</span> Tarazlıq nöqtəsi
+                            <span class="text-blue-600 mr-2">#40</span> Tarazlıq nöqtəsi
                         </h3>
                         <svg class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
@@ -2687,7 +2637,7 @@ Nümunələr:
                 <div class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden mb-4">
                     <div class="bg-slate-50 p-4 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition select-none" onclick="toggleCard(this)">
                         <h3 class="font-bold text-slate-700">
-                            <span class="text-blue-600 mr-2">#42</span> Statistika İzləyicisi
+                            <span class="text-blue-600 mr-2">#41</span> Statistika İzləyicisi
                         </h3>
                         <svg class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
@@ -2743,7 +2693,7 @@ Bir sinif yaradın ki, o, ona verilən ədədlərin minimumunu, maksimumunu və 
                 <div class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden mb-4">
                     <div class="bg-slate-50 p-4 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition select-none" onclick="toggleCard(this)">
                         <h3 class="font-bold text-slate-700">
-                            <span class="text-blue-600 mr-2">#43</span> Yağış Suyunun Tutulması
+                            <span class="text-blue-600 mr-2">#42</span> Yağış Suyunun Tutulması
                         </h3>
                         <svg class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
@@ -2805,7 +2755,7 @@ Nümunə:
                 <div class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden mb-4">
                     <div class="bg-slate-50 p-4 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition select-none" onclick="toggleCard(this)">
                         <h3 class="font-bold text-slate-700">
-                            <span class="text-blue-600 mr-2">#44</span> Maksimum Yarım-massiv Cəmi
+                            <span class="text-blue-600 mr-2">#43</span> Maksimum Yarım-massiv Cəmi
                         </h3>
                         <svg class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
@@ -2855,7 +2805,7 @@ Nümunə:
                 <div class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden mb-4">
                     <div class="bg-slate-50 p-4 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition select-none" onclick="toggleCard(this)">
                         <h3 class="font-bold text-slate-700">
-                            <span class="text-blue-600 mr-2">#45</span> Onlayn Səbət (ShoppingCart)
+                            <span class="text-blue-600 mr-2">#44</span> Onlayn Səbət (ShoppingCart)
                         </h3>
                         <svg class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
@@ -2894,7 +2844,7 @@ checkout(): Bu metod yekun qiyməti qaytarır. Şərt: Əgər səbətdəki məhs
                 <div class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden mb-4">
                     <div class="bg-slate-50 p-4 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition select-none" onclick="toggleCard(this)">
                         <h3 class="font-bold text-slate-700">
-                            <span class="text-blue-600 mr-2">#46</span> Oyun Qəhrəmanı (Player)
+                            <span class="text-blue-600 mr-2">#45</span> Oyun Qəhrəmanı (Player)
                         </h3>
                         <svg class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
@@ -2933,7 +2883,7 @@ heal(int amount): Qəhrəman sağalır. Canı artır, amma 100-dən yuxarı qalx
                 <div class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden mb-4">
                     <div class="bg-slate-50 p-4 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition select-none" onclick="toggleCard(this)">
                         <h3 class="font-bold text-slate-700">
-                            <span class="text-blue-600 mr-2">#47</span>  Ağıllı Kondisioner
+                            <span class="text-blue-600 mr-2">#46</span>  Ağıllı Kondisioner
                         </h3>
                         <svg class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
@@ -2978,7 +2928,7 @@ decreaseTemp(): Temperaturu 1 dərəcə azaldır.
                 <div class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden mb-4">
                     <div class="bg-slate-50 p-4 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition select-none" onclick="toggleCard(this)">
                         <h3 class="font-bold text-slate-700">
-                            <span class="text-blue-600 mr-2">#48</span> YouTube Videosu
+                            <span class="text-blue-600 mr-2">#47</span> YouTube Videosu
                         </h3>
                         <svg class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
@@ -3017,7 +2967,7 @@ like(): Video bəyənilir. likes sayını 1 vahid artırır.
                 <div class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden mb-4">
                     <div class="bg-slate-50 p-4 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition select-none" onclick="toggleCard(this)">
                         <h3 class="font-bold text-slate-700">
-                            <span class="text-blue-600 mr-2">#49</span> Avtobus
+                            <span class="text-blue-600 mr-2">#48</span> Avtobus
                         </h3>
                         <svg class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
@@ -3057,11 +3007,11 @@ Vacib Şərt: Əgər avtobus boşdursa (0 sərnişin), heç kim düşə bilməz 
                 <div class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden mb-4">
                     <div class="bg-slate-50 p-4 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition select-none" onclick="toggleCard(this)">
                         <h3 class="font-bold text-slate-700">
-                            <span class="text-blue-600 mr-2">#50</span> Super Terminal
+                            <span class="text-blue-600 mr-2">#49</span> Super Terminal
                         </h3>
                         <svg class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
-                    <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
+                    <div class="border-t border-slate-100 p-5 bg-white content-area hidden">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
                             <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">Dəyişənlər (hamısı public):
@@ -3100,7 +3050,74 @@ resetBlock(): (Texniki servis) Bloku açır (false), cəhdləri sıfırlayır.</
                                     </div>
                                     <span class="ml-3 text-xs text-gray-400 font-sans">solution.cpp</span>
                                 </div>
-                                <pre class="m-0 !bg-[#1e1e1e]"><code class="language-cpp !bg-[#1e1e1e] !p-4 block hljs" data-highlighted="yes"></code></pre>
+                                <pre class="m-0 !bg-[#1e1e1e]"><code class="language-cpp !bg-[#1e1e1e] !p-4 block hljs" data-highlighted="yes"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Terminal</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-type">int</span> balance;
+    <span class="hljs-type">bool</span> isBlocked;
+    <span class="hljs-type">int</span> wrongAttempts;
+    <span class="hljs-type">bool</span> isVIP;
+
+    <span class="hljs-built_in">Terminal</span>() {
+        balance = <span class="hljs-number">0</span>;
+        isBlocked = <span class="hljs-literal">false</span>;
+        wrongAttempts = <span class="hljs-number">0</span>;
+        isVIP = <span class="hljs-literal">false</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">enterPin</span><span class="hljs-params">(<span class="hljs-type">int</span> code)</span> </span>{
+        <span class="hljs-comment">// Bloklanıbsa heç pin kod da yoxlamır</span>
+        <span class="hljs-keyword">if</span> (isBlocked) {
+            <span class="hljs-keyword">return</span>;
+        }
+
+        <span class="hljs-keyword">if</span> (code == <span class="hljs-number">1234</span>) {
+            wrongAttempts = <span class="hljs-number">0</span>; <span class="hljs-comment">// Uğurlu giriş</span>
+        } <span class="hljs-keyword">else</span> {
+            wrongAttempts++;
+            <span class="hljs-keyword">if</span> (wrongAttempts &gt;= <span class="hljs-number">3</span>) {
+                isBlocked = <span class="hljs-literal">true</span>; <span class="hljs-comment">// 3 səhv -&gt; Blok</span>
+            }
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">deposit</span><span class="hljs-params">(<span class="hljs-type">int</span> amount)</span> </span>{
+        <span class="hljs-keyword">if</span> (isBlocked) <span class="hljs-keyword">return</span>; <span class="hljs-comment">// Blok yoxlanışı</span>
+        balance += amount;
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">makePayment</span><span class="hljs-params">(<span class="hljs-type">int</span> amount)</span> </span>{
+        <span class="hljs-keyword">if</span> (isBlocked) <span class="hljs-keyword">return</span>; <span class="hljs-comment">// Blok yoxlanışı</span>
+
+        <span class="hljs-comment">// Komissiya hesabı</span>
+        <span class="hljs-type">int</span> fee = <span class="hljs-number">2</span>;
+        <span class="hljs-keyword">if</span> (isVIP) {
+            fee = <span class="hljs-number">0</span>;
+        }
+
+        <span class="hljs-type">int</span> totalNeeded = amount + fee;
+
+        <span class="hljs-comment">// Pul çatırsa ödəniş et</span>
+        <span class="hljs-keyword">if</span> (balance &gt;= totalNeeded) {
+            balance -= totalNeeded;
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">buyVip</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (isBlocked) <span class="hljs-keyword">return</span>; <span class="hljs-comment">// Blok yoxlanışı</span>
+        
+        <span class="hljs-comment">// Artıq VIP deyilsə və pulu çatırsa</span>
+        <span class="hljs-keyword">if</span> (!isVIP &amp;&amp; balance &gt;= <span class="hljs-number">100</span>) {
+            balance -= <span class="hljs-number">100</span>;
+            isVIP = <span class="hljs-literal">true</span>;
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">resetBlock</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// Bu metod blokda olsa belə işləyir (Texniki servis)</span>
+        isBlocked = <span class="hljs-literal">false</span>;
+        wrongAttempts = <span class="hljs-number">0</span>;
+    }
+};</code></pre>
                             </div>
 
                         </div>
@@ -3110,11 +3127,11 @@ resetBlock(): (Texniki servis) Bloku açır (false), cəhdləri sıfırlayır.</
                 <div class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden mb-4">
                     <div class="bg-slate-50 p-4 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition select-none" onclick="toggleCard(this)">
                         <h3 class="font-bold text-slate-700">
-                            <span class="text-blue-600 mr-2">#51</span> Təyyarənin Qəza Riski
+                            <span class="text-blue-600 mr-2">#50</span> Təyyarənin Qəza Riski
                         </h3>
                         <svg class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
-                    <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
+                    <div class="border-t border-slate-100 p-5 bg-white content-area hidden">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
                             <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">Ssenari: Siz pilot deyil, təyyarənin "avtopilot" proqramını yazırsınız. Təyyarə havada olarkən yanacaq bitərsə və ya mühərrik çox qızarsa (risk səviyyəsi), təyyarə düşür (isCrashed).
@@ -3156,7 +3173,69 @@ Təyyarəni yerə endirir (altitude = 0). İstilik 0 olur.
                                     </div>
                                     <span class="ml-3 text-xs text-gray-400 font-sans">solution.cpp</span>
                                 </div>
-                                <pre class="m-0 !bg-[#1e1e1e]"><code class="language-cpp !bg-[#1e1e1e] !p-4 block hljs" data-highlighted="yes"></code></pre>
+                                <pre class="m-0 !bg-[#1e1e1e]"><code class="language-cpp !bg-[#1e1e1e] !p-4 block hljs" data-highlighted="yes"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Airplane</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-type">int</span> fuel;
+    <span class="hljs-type">int</span> altitude;
+    <span class="hljs-type">int</span> engineHeat;
+    <span class="hljs-type">bool</span> isCrashed;
+
+    <span class="hljs-built_in">Airplane</span>() {
+        fuel = <span class="hljs-number">100</span>;
+        altitude = <span class="hljs-number">0</span>;
+        engineHeat = <span class="hljs-number">0</span>;
+        isCrashed = <span class="hljs-literal">false</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">takeOff</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (isCrashed) <span class="hljs-keyword">return</span>;
+        <span class="hljs-comment">// Yerdədirsə və yanacaq varsa qalx</span>
+        <span class="hljs-keyword">if</span> (altitude == <span class="hljs-number">0</span> &amp;&amp; fuel &gt; <span class="hljs-number">0</span>) {
+            altitude = <span class="hljs-number">1000</span>;
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">flyFast</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (isCrashed || altitude == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span>;
+
+        fuel -= <span class="hljs-number">20</span>;
+        engineHeat += <span class="hljs-number">30</span>;
+
+        <span class="hljs-comment">// Ardıcıl yoxlama: Əvvəl yanacaq, sonra istilik</span>
+        <span class="hljs-keyword">if</span> (fuel &lt; <span class="hljs-number">0</span>) {
+            isCrashed = <span class="hljs-literal">true</span>;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (engineHeat &gt; <span class="hljs-number">100</span>) {
+            isCrashed = <span class="hljs-literal">true</span>;
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">flySlow</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (isCrashed || altitude == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span>;
+
+        fuel -= <span class="hljs-number">10</span>;
+        engineHeat += <span class="hljs-number">10</span>;
+
+        <span class="hljs-keyword">if</span> (fuel &lt; <span class="hljs-number">0</span>) {
+            isCrashed = <span class="hljs-literal">true</span>;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (engineHeat &gt; <span class="hljs-number">100</span>) {
+            isCrashed = <span class="hljs-literal">true</span>;
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">coolDown</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (isCrashed) <span class="hljs-keyword">return</span>;
+        engineHeat -= <span class="hljs-number">20</span>;
+        <span class="hljs-keyword">if</span> (engineHeat &lt; <span class="hljs-number">0</span>) {
+            engineHeat = <span class="hljs-number">0</span>;
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">land</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (isCrashed) <span class="hljs-keyword">return</span>;
+        altitude = <span class="hljs-number">0</span>;
+        engineHeat = <span class="hljs-number">0</span>; <span class="hljs-comment">// Yerə enəndə mühərrik soyuyur</span>
+    }
+};</code></pre>
                             </div>
 
                         </div>
@@ -3166,11 +3245,11 @@ Təyyarəni yerə endirir (altitude = 0). İstilik 0 olur.
                 <div class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden mb-4">
                     <div class="bg-slate-50 p-4 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition select-none" onclick="toggleCard(this)">
                         <h3 class="font-bold text-slate-700">
-                            <span class="text-blue-600 mr-2">#52</span> Botanika:Bitkini yaşat
+                            <span class="text-blue-600 mr-2">#51</span> Botanika:Bitkini yaşat
                         </h3>
                         <svg class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
-                    <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
+                    <div class="border-t border-slate-100 p-5 bg-white content-area hidden">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
                             <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">Məqsəd: Bitkini canlı saxlamaq, böyütmək və çiçək açdırmaq.
@@ -3204,7 +3283,49 @@ Yalnız bitki sağdırsa və boyu 100-ə çatıbsa (və ya keçibsə), çiçək 
                                     </div>
                                     <span class="ml-3 text-xs text-gray-400 font-sans">solution.cpp</span>
                                 </div>
-                                <pre class="m-0 !bg-[#1e1e1e]"><code class="language-cpp !bg-[#1e1e1e] !p-4 block hljs" data-highlighted="yes"></code></pre>
+                                <pre class="m-0 !bg-[#1e1e1e]"><code class="language-cpp !bg-[#1e1e1e] !p-4 block hljs" data-highlighted="yes"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Flower</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-type">int</span> water;
+    <span class="hljs-type">int</span> height;
+    <span class="hljs-type">bool</span> isAlive;
+    <span class="hljs-type">bool</span> hasFlower;
+
+    <span class="hljs-built_in">Flower</span>() {
+        water = <span class="hljs-number">50</span>;
+        height = <span class="hljs-number">0</span>;
+        isAlive = <span class="hljs-literal">true</span>;
+        hasFlower = <span class="hljs-literal">false</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">giveWater</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (!isAlive) <span class="hljs-keyword">return</span>;
+        water += <span class="hljs-number">20</span>;
+        <span class="hljs-keyword">if</span> (water &gt; <span class="hljs-number">100</span>) {
+            isAlive = <span class="hljs-literal">false</span>;
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">giveSun</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (!isAlive) <span class="hljs-keyword">return</span>;
+        water -= <span class="hljs-number">10</span>;
+        
+        <span class="hljs-keyword">if</span> (water &lt; <span class="hljs-number">0</span>) {
+            isAlive = <span class="hljs-literal">false</span>;
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-comment">// Bitki sağdırsa və su ideal səviyyədədirsə böyüyür</span>
+            <span class="hljs-keyword">if</span> (water &gt;= <span class="hljs-number">30</span> &amp;&amp; water &lt;= <span class="hljs-number">70</span>) {
+                height += <span class="hljs-number">10</span>;
+            }
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">bloom</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (!isAlive) <span class="hljs-keyword">return</span>;
+        <span class="hljs-keyword">if</span> (height &gt;= <span class="hljs-number">100</span>) {
+            hasFlower = <span class="hljs-literal">true</span>;
+        }
+    }
+};</code></pre>
                             </div>
 
                         </div>
@@ -3214,7 +3335,7 @@ Yalnız bitki sağdırsa və boyu 100-ə çatıbsa (və ya keçibsə), çiçək 
                 <div class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden mb-4">
                     <div class="bg-slate-50 p-4 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition select-none" onclick="toggleCard(this)">
                         <h3 class="font-bold text-slate-700">
-                            <span class="text-blue-600 mr-2">#53</span> Maşinistin Rejimi
+                            <span class="text-blue-600 mr-2">#52</span> Maşinistin Rejimi
                         </h3>
                         <svg class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
@@ -3254,7 +3375,48 @@ Yeni iş günü başlayır: fatigue 0 olur, shiftHours 0 olur.</p>
                                     </div>
                                     <span class="ml-3 text-xs text-gray-400 font-sans">solution.cpp</span>
                                 </div>
-                                <pre class="m-0 !bg-[#1e1e1e]"><code class="language-cpp !bg-[#1e1e1e] !p-4 block hljs" data-highlighted="yes"></code></pre>
+                                <pre class="m-0 !bg-[#1e1e1e]"><code class="language-cpp !bg-[#1e1e1e] !p-4 block hljs" data-highlighted="yes"><span class="hljs-keyword">class</span> <span class="hljs-title class_">TrainDriver</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-type">int</span> fatigue;
+    <span class="hljs-type">int</span> shiftHours;
+    <span class="hljs-type">bool</span> licenseActive;
+
+    <span class="hljs-built_in">TrainDriver</span>() {
+        fatigue = <span class="hljs-number">0</span>;
+        shiftHours = <span class="hljs-number">0</span>;
+        licenseActive = <span class="hljs-literal">true</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">drive</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (!licenseActive) <span class="hljs-keyword">return</span>;
+
+        shiftHours++;
+        fatigue += <span class="hljs-number">30</span>;
+
+        <span class="hljs-comment">// Qaydalar: Yorğunluq 100-ü keçsə və ya iş saatı 10-u keçsə</span>
+        <span class="hljs-keyword">if</span> (fatigue &gt; <span class="hljs-number">100</span> || shiftHours &gt; <span class="hljs-number">10</span>) {
+            licenseActive = <span class="hljs-literal">false</span>;
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">rest</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (!licenseActive) <span class="hljs-keyword">return</span>;
+
+        fatigue -= <span class="hljs-number">40</span>;
+        <span class="hljs-comment">// Yorğunluq mənfi ola bilməz</span>
+        <span class="hljs-keyword">if</span> (fatigue &lt; <span class="hljs-number">0</span>) {
+            fatigue = <span class="hljs-number">0</span>;
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">newDay</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (!licenseActive) <span class="hljs-keyword">return</span>;
+
+        <span class="hljs-comment">// Yeni gündə hər şey sıfırlanır</span>
+        fatigue = <span class="hljs-number">0</span>;
+        shiftHours = <span class="hljs-number">0</span>;
+    }
+};</code></pre>
                             </div>
 
                         </div>
@@ -3264,7 +3426,7 @@ Yeni iş günü başlayır: fatigue 0 olur, shiftHours 0 olur.</p>
                 <div class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden mb-4">
                     <div class="bg-slate-50 p-4 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition select-none" onclick="toggleCard(this)">
                         <h3 class="font-bold text-slate-700">
-                            <span class="text-blue-600 mr-2">#54</span> Xalça Skaner
+                            <span class="text-blue-600 mr-2">#53</span> Xalça Skaner
                         </h3>
                         <svg class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
@@ -3307,7 +3469,60 @@ Batareya 5 azalır.
                                     </div>
                                     <span class="ml-3 text-xs text-gray-400 font-sans">solution.cpp</span>
                                 </div>
-                                <pre class="m-0 !bg-[#1e1e1e]"><code class="language-cpp !bg-[#1e1e1e] !p-4 block hljs" data-highlighted="yes"></code></pre>
+                                <pre class="m-0 !bg-[#1e1e1e]"><code class="language-cpp !bg-[#1e1e1e] !p-4 block hljs" data-highlighted="yes"><span class="hljs-keyword">class</span> <span class="hljs-title class_">CarpetScanner</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-type">int</span> scannedCount;
+    <span class="hljs-type">int</span> focusQuality;
+    <span class="hljs-type">int</span> battery;
+    <span class="hljs-type">bool</span> isOff;
+
+    <span class="hljs-built_in">CarpetScanner</span>() {
+        scannedCount = <span class="hljs-number">0</span>;
+        focusQuality = <span class="hljs-number">0</span>;
+        battery = <span class="hljs-number">100</span>;
+        isOff = <span class="hljs-literal">false</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">autoFocus</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (isOff) <span class="hljs-keyword">return</span>;
+
+        battery -= <span class="hljs-number">5</span>;
+        <span class="hljs-keyword">if</span> (battery &lt;= <span class="hljs-number">0</span>) {
+            isOff = <span class="hljs-literal">true</span>;
+        } <span class="hljs-keyword">else</span> {
+            focusQuality += <span class="hljs-number">25</span>;
+            <span class="hljs-keyword">if</span> (focusQuality &gt; <span class="hljs-number">100</span>) {
+                focusQuality = <span class="hljs-number">100</span>;
+            }
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">scanPattern</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (isOff) <span class="hljs-keyword">return</span>;
+
+        battery -= <span class="hljs-number">20</span>;
+        <span class="hljs-keyword">if</span> (battery &lt;= <span class="hljs-number">0</span>) {
+            isOff = <span class="hljs-literal">true</span>;
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-comment">// Yalnız fokus 80 və yuxarıdırsa naxış qeydə alınır</span>
+            <span class="hljs-keyword">if</span> (focusQuality &gt;= <span class="hljs-number">80</span>) {
+                scannedCount++;
+            }
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">moveCamera</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (isOff) <span class="hljs-keyword">return</span>;
+
+        battery -= <span class="hljs-number">5</span>;
+        <span class="hljs-keyword">if</span> (battery &lt;= <span class="hljs-number">0</span>) {
+            isOff = <span class="hljs-literal">true</span>;
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-comment">// Hərəkət edəndə fokus tamamilə itir</span>
+            focusQuality = <span class="hljs-number">0</span>;
+        }
+    }
+};</code></pre>
                             </div>
 
                         </div>
@@ -3317,7 +3532,7 @@ Batareya 5 azalır.
                 <div class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden mb-4">
                     <div class="bg-slate-50 p-4 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition select-none" onclick="toggleCard(this)">
                         <h3 class="font-bold text-slate-700">
-                            <span class="text-blue-600 mr-2">#55</span> Tələbənin İmtahanı
+                            <span class="text-blue-600 mr-2">#54</span> Tələbənin İmtahanı
                         </h3>
                         <svg class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
@@ -3361,7 +3576,63 @@ Keçmək Şərti: Əgər knowledge 80 və ya yuxarıdırsa VƏ energy 30 və ya 
                                     </div>
                                     <span class="ml-3 text-xs text-gray-400 font-sans">solution.cpp</span>
                                 </div>
-                                <pre class="m-0 !bg-[#1e1e1e]"><code class="language-cpp !bg-[#1e1e1e] !p-4 block hljs" data-highlighted="yes"></code></pre>
+                                <pre class="m-0 !bg-[#1e1e1e]"><code class="language-cpp !bg-[#1e1e1e] !p-4 block hljs" data-highlighted="yes"><span class="hljs-keyword">class</span> <span class="hljs-title class_">StudentExam</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-type">int</span> knowledge;
+    <span class="hljs-type">int</span> energy;
+    <span class="hljs-type">bool</span> isFinished;
+    <span class="hljs-type">bool</span> isPassed;
+
+    <span class="hljs-built_in">StudentExam</span>() {
+        knowledge = <span class="hljs-number">0</span>;
+        energy = <span class="hljs-number">100</span>;
+        isFinished = <span class="hljs-literal">false</span>;
+        isPassed = <span class="hljs-literal">false</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">study</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (isFinished) <span class="hljs-keyword">return</span>;
+        
+        <span class="hljs-comment">// Oxumaq üçün ən az 20 enerji lazımdır</span>
+        <span class="hljs-keyword">if</span> (energy &gt;= <span class="hljs-number">20</span>) {
+            knowledge += <span class="hljs-number">25</span>;
+            energy -= <span class="hljs-number">20</span>;
+            <span class="hljs-keyword">if</span> (knowledge &gt; <span class="hljs-number">100</span>) {
+                knowledge = <span class="hljs-number">100</span>;
+            }
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">sleep</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (isFinished) <span class="hljs-keyword">return</span>;
+        
+        energy += <span class="hljs-number">40</span>;
+        <span class="hljs-keyword">if</span> (energy &gt; <span class="hljs-number">100</span>) {
+            energy = <span class="hljs-number">100</span>;
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">playGame</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (isFinished) <span class="hljs-keyword">return</span>;
+
+        energy -= <span class="hljs-number">10</span>;
+        knowledge -= <span class="hljs-number">10</span>;
+
+        <span class="hljs-keyword">if</span> (energy &lt; <span class="hljs-number">0</span>) energy = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">if</span> (knowledge &lt; <span class="hljs-number">0</span>) knowledge = <span class="hljs-number">0</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">takeExam</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (isFinished) <span class="hljs-keyword">return</span>;
+
+        isFinished = <span class="hljs-literal">true</span>;
+
+        <span class="hljs-comment">// Keçmək üçün həm bilik, həm enerji lazımdır</span>
+        <span class="hljs-keyword">if</span> (knowledge &gt;= <span class="hljs-number">80</span> &amp;&amp; energy &gt;= <span class="hljs-number">30</span>) {
+            isPassed = <span class="hljs-literal">true</span>;
+        }
+    }
+};</code></pre>
                             </div>
 
                         </div>
@@ -3371,7 +3642,7 @@ Keçmək Şərti: Əgər knowledge 80 və ya yuxarıdırsa VƏ energy 30 və ya 
                 <div class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden mb-4">
                     <div class="bg-slate-50 p-4 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition select-none" onclick="toggleCard(this)">
                         <h3 class="font-bold text-slate-700">
-                            <span class="text-blue-600 mr-2">#56</span> Kofe Maşını
+                            <span class="text-blue-600 mr-2">#55</span> Kofe Maşını
                         </h3>
                         <svg class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
@@ -3424,7 +3695,79 @@ money -100 azalır.
                                     </div>
                                     <span class="ml-3 text-xs text-gray-400 font-sans">solution.cpp</span>
                                 </div>
-                                <pre class="m-0 !bg-[#1e1e1e]"><code class="language-cpp !bg-[#1e1e1e] !p-4 block hljs" data-highlighted="yes"></code></pre>
+                                <pre class="m-0 !bg-[#1e1e1e]"><code class="language-cpp !bg-[#1e1e1e] !p-4 block hljs" data-highlighted="yes"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Barista</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-type">int</span> beans;
+    <span class="hljs-type">int</span> milk;
+    <span class="hljs-type">int</span> cups;
+    <span class="hljs-type">int</span> money;
+    <span class="hljs-type">int</span> dirt;
+    <span class="hljs-type">int</span> reputation;
+
+    <span class="hljs-built_in">Barista</span>() {
+        beans = <span class="hljs-number">50</span>;
+        milk = <span class="hljs-number">100</span>;
+        cups = <span class="hljs-number">5</span>;
+        money = <span class="hljs-number">0</span>;
+        dirt = <span class="hljs-number">0</span>;
+        reputation = <span class="hljs-number">50</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">makeEspresso</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// 1. Maşın çox çirklidirsə, heç nə olmur</span>
+        <span class="hljs-keyword">if</span> (dirt &gt; <span class="hljs-number">80</span>) <span class="hljs-keyword">return</span>;
+
+        <span class="hljs-comment">// 2. Resursları yoxlayırıq</span>
+        <span class="hljs-keyword">if</span> (beans &gt;= <span class="hljs-number">10</span> &amp;&amp; cups &gt;= <span class="hljs-number">1</span>) {
+            <span class="hljs-comment">// Uğurlu</span>
+            beans -= <span class="hljs-number">10</span>;
+            cups -= <span class="hljs-number">1</span>;
+            money += <span class="hljs-number">30</span>;
+            dirt += <span class="hljs-number">10</span>;
+            reputation += <span class="hljs-number">2</span>;
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-comment">// Uğursız (Resurs yoxdur)</span>
+            reputation -= <span class="hljs-number">5</span>;
+        }
+        
+        <span class="hljs-comment">// Limitlər</span>
+        <span class="hljs-keyword">if</span> (dirt &gt; <span class="hljs-number">100</span>) dirt = <span class="hljs-number">100</span>;
+        <span class="hljs-keyword">if</span> (reputation &gt; <span class="hljs-number">100</span>) reputation = <span class="hljs-number">100</span>;
+        <span class="hljs-keyword">if</span> (reputation &lt; <span class="hljs-number">0</span>) reputation = <span class="hljs-number">0</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">makeLatte</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (dirt &gt; <span class="hljs-number">80</span>) <span class="hljs-keyword">return</span>;
+
+        <span class="hljs-keyword">if</span> (beans &gt;= <span class="hljs-number">10</span> &amp;&amp; milk &gt;= <span class="hljs-number">20</span> &amp;&amp; cups &gt;= <span class="hljs-number">1</span>) {
+            beans -= <span class="hljs-number">10</span>;
+            milk -= <span class="hljs-number">20</span>;
+            cups -= <span class="hljs-number">1</span>;
+            money += <span class="hljs-number">50</span>;
+            dirt += <span class="hljs-number">15</span>;
+            reputation += <span class="hljs-number">3</span>;
+        } <span class="hljs-keyword">else</span> {
+            reputation -= <span class="hljs-number">5</span>;
+        }
+
+        <span class="hljs-keyword">if</span> (dirt &gt; <span class="hljs-number">100</span>) dirt = <span class="hljs-number">100</span>;
+        <span class="hljs-keyword">if</span> (reputation &gt; <span class="hljs-number">100</span>) reputation = <span class="hljs-number">100</span>;
+        <span class="hljs-keyword">if</span> (reputation &lt; <span class="hljs-number">0</span>) reputation = <span class="hljs-number">0</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">cleanMachine</span><span class="hljs-params">()</span> </span>{
+        dirt = <span class="hljs-number">0</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">buySupplies</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (money &gt;= <span class="hljs-number">100</span>) {
+            money -= <span class="hljs-number">100</span>;
+            beans += <span class="hljs-number">50</span>;
+            milk += <span class="hljs-number">100</span>;
+            cups += <span class="hljs-number">10</span>;
+        }
+    }
+};</code></pre>
                             </div>
 
                         </div>
@@ -3434,7 +3777,7 @@ money -100 azalır.
                 <div class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden mb-4">
                     <div class="bg-slate-50 p-4 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition select-none" onclick="toggleCard(this)">
                         <h3 class="font-bold text-slate-700">
-                            <span class="text-blue-600 mr-2">#57</span> Orta Əsr Şəhəri
+                            <span class="text-blue-600 mr-2">#56</span> Orta Əsr Şəhəri
                         </h3>
                         <svg class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
@@ -3466,7 +3809,126 @@ Amma çox ehtiyatlı ol (checkStatus); əgər xalqın xoşbəxtliyi 20-dən aşa
                                     </div>
                                     <span class="ml-3 text-xs text-gray-400 font-sans">solution.cpp</span>
                                 </div>
-                                <pre class="m-0 !bg-[#1e1e1e]"><code class="language-cpp !bg-[#1e1e1e] !p-4 block hljs" data-highlighted="yes"></code></pre>
+                                <pre class="m-0 !bg-[#1e1e1e]"><code class="language-cpp !bg-[#1e1e1e] !p-4 block hljs" data-highlighted="yes"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MedievalCity</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-type">int</span> population;
+    <span class="hljs-type">int</span> food;
+    <span class="hljs-type">int</span> wood;
+    <span class="hljs-type">int</span> gold;
+    <span class="hljs-type">int</span> soldiers;
+    <span class="hljs-type">int</span> happiness;
+    <span class="hljs-type">bool</span> isRevolting;
+    <span class="hljs-type">bool</span> isDestroyed;
+
+    <span class="hljs-built_in">MedievalCity</span>() {
+        population = <span class="hljs-number">10</span>;
+        food = <span class="hljs-number">100</span>;
+        wood = <span class="hljs-number">50</span>;
+        gold = <span class="hljs-number">50</span>;
+        soldiers = <span class="hljs-number">0</span>;
+        happiness = <span class="hljs-number">80</span>;
+        isRevolting = <span class="hljs-literal">false</span>;
+        isDestroyed = <span class="hljs-literal">false</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">assignWorkers</span><span class="hljs-params">(<span class="hljs-type">int</span> farmers, <span class="hljs-type">int</span> lumberjacks)</span> </span>{
+        <span class="hljs-keyword">if</span> (isDestroyed || isRevolting) <span class="hljs-keyword">return</span>;
+
+        <span class="hljs-comment">// İşçi sayı əhalidən çox ola bilməz</span>
+        <span class="hljs-keyword">if</span> (farmers + lumberjacks &gt; population) <span class="hljs-keyword">return</span>;
+
+        <span class="hljs-comment">// İstehsal</span>
+        food += farmers * <span class="hljs-number">5</span>;
+        wood += lumberjacks * <span class="hljs-number">3</span>;
+
+        <span class="hljs-comment">// Boş qalanlar vergi verir</span>
+        <span class="hljs-type">int</span> idlePeople = population - (farmers + lumberjacks);
+        gold += idlePeople * <span class="hljs-number">1</span>;
+
+        <span class="hljs-comment">// İşləmək xoşbəxtliyi azaldır</span>
+        happiness -= <span class="hljs-number">2</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">recruitSoldier</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (isDestroyed || isRevolting) <span class="hljs-keyword">return</span>;
+
+        <span class="hljs-keyword">if</span> (gold &gt;= <span class="hljs-number">20</span> &amp;&amp; wood &gt;= <span class="hljs-number">10</span> &amp;&amp; food &gt;= <span class="hljs-number">10</span> &amp;&amp; population &gt;= <span class="hljs-number">1</span>) {
+            gold -= <span class="hljs-number">20</span>;
+            wood -= <span class="hljs-number">10</span>;
+            food -= <span class="hljs-number">10</span>;
+            population -= <span class="hljs-number">1</span>;
+            soldiers += <span class="hljs-number">1</span>;
+            happiness += <span class="hljs-number">5</span>;
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">feedPopulation</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (isDestroyed) <span class="hljs-keyword">return</span>;
+
+        <span class="hljs-type">int</span> totalPeople = population + soldiers;
+        <span class="hljs-type">int</span> neededFood = totalPeople * <span class="hljs-number">2</span>;
+
+        <span class="hljs-keyword">if</span> (food &gt;= neededFood) {
+            food -= neededFood;
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-comment">// Aclıq rejimi</span>
+            <span class="hljs-comment">// Qalan yemək hamıya çatmır</span>
+            <span class="hljs-comment">// Neçə nəfər ac qalır? </span>
+            <span class="hljs-comment">// Qayda: Çatışmayan hər 2 yemək üçün 1 nəfər ölür.</span>
+            <span class="hljs-comment">// Bu o deməkdir ki: food / 2 qədər insan sağ qalır.</span>
+            <span class="hljs-comment">// Qalanlar (total - sağ qalan) ölür.</span>
+            
+            <span class="hljs-type">int</span> survivors = food / <span class="hljs-number">2</span>;
+            <span class="hljs-type">int</span> deaths = totalPeople - survivors;
+            
+            food = <span class="hljs-number">0</span>; <span class="hljs-comment">// Yemək bitdi</span>
+            happiness -= <span class="hljs-number">20</span>; <span class="hljs-comment">// İnsanlar bədbəxtdir</span>
+
+            <span class="hljs-comment">// Ölümləri çıxmaq (Əvvəlcə mülki əhali, sonra əsgərlər)</span>
+            <span class="hljs-keyword">if</span> (population &gt;= deaths) {
+                population -= deaths;
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-comment">// Əhali bitdi, qalan ölümlər əsgərlərdən çıxılır</span>
+                deaths -= population;
+                population = <span class="hljs-number">0</span>;
+                soldiers -= deaths;
+                <span class="hljs-keyword">if</span> (soldiers &lt; <span class="hljs-number">0</span>) soldiers = <span class="hljs-number">0</span>;
+            }
+
+            <span class="hljs-keyword">if</span> (population + soldiers == <span class="hljs-number">0</span>) {
+                isDestroyed = <span class="hljs-literal">true</span>;
+            }
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">holdFestival</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (isDestroyed) <span class="hljs-keyword">return</span>;
+
+        <span class="hljs-keyword">if</span> (food &gt;= <span class="hljs-number">50</span> &amp;&amp; gold &gt;= <span class="hljs-number">30</span>) {
+            food -= <span class="hljs-number">50</span>;
+            gold -= <span class="hljs-number">30</span>;
+            happiness += <span class="hljs-number">20</span>;
+            <span class="hljs-comment">// Festival üsyanı yatırır</span>
+            isRevolting = <span class="hljs-literal">false</span>;
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">checkStatus</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// Limitlər</span>
+        <span class="hljs-keyword">if</span> (happiness &gt; <span class="hljs-number">100</span>) happiness = <span class="hljs-number">100</span>;
+        <span class="hljs-keyword">if</span> (happiness &lt; <span class="hljs-number">0</span>) happiness = <span class="hljs-number">0</span>;
+
+        <span class="hljs-comment">// Üsyan şərti</span>
+        <span class="hljs-keyword">if</span> (happiness &lt; <span class="hljs-number">20</span>) {
+            isRevolting = <span class="hljs-literal">true</span>;
+        }
+
+        <span class="hljs-comment">// Şəhərin dağılması (Üsyan var və əsgər yoxdursa)</span>
+        <span class="hljs-keyword">if</span> (isRevolting &amp;&amp; soldiers == <span class="hljs-number">0</span>) {
+            isDestroyed = <span class="hljs-literal">true</span>;
+        }
+    }
+};</code></pre>
                             </div>
 
                         </div>
@@ -3476,11 +3938,11 @@ Amma çox ehtiyatlı ol (checkStatus); əgər xalqın xoşbəxtliyi 20-dən aşa
                 <div class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden mb-4">
                     <div class="bg-slate-50 p-4 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition select-none" onclick="toggleCard(this)">
                         <h3 class="font-bold text-slate-700">
-                            <span class="text-blue-600 mr-2">#58</span> Qala müdafiəsi
+                            <span class="text-blue-600 mr-2">#57</span> Qala müdafiəsi
                         </h3>
                         <svg class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
-                    <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
+                    <div class="border-t border-slate-100 p-5 bg-white content-area hidden">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
                             <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">Təsəvvür et ki, sən uçurumun kənarındakı sonuncu qalanın komandirisən; divarlarının möhkəmliyi hələlik 100-dür, anbarında 50 ox, xəzinəndə 100 qızıl var və qarşında səni məhv etməyə hazır 50 qəzəbli düşmən dayanıb.
@@ -3507,7 +3969,97 @@ Lakin ən pisi odur ki, ehtiyatın bitərsə, çarəsiz qalıb döyüş meydanı
                                     </div>
                                     <span class="ml-3 text-xs text-gray-400 font-sans">solution.cpp</span>
                                 </div>
-                                <pre class="m-0 !bg-[#1e1e1e]"><code class="language-cpp !bg-[#1e1e1e] !p-4 block hljs" data-highlighted="yes"></code></pre>
+                                <pre class="m-0 !bg-[#1e1e1e]"><code class="language-cpp !bg-[#1e1e1e] !p-4 block hljs" data-highlighted="yes"><span class="hljs-keyword">class</span> <span class="hljs-title class_">CastleSiege</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-type">int</span> wallIntegrity;
+    <span class="hljs-type">int</span> arrows;
+    <span class="hljs-type">int</span> gold;
+    <span class="hljs-type">int</span> enemies;
+    <span class="hljs-type">bool</span> isBreached;
+
+    <span class="hljs-built_in">CastleSiege</span>() {
+        wallIntegrity = <span class="hljs-number">100</span>;
+        arrows = <span class="hljs-number">50</span>;
+        gold = <span class="hljs-number">100</span>;
+        enemies = <span class="hljs-number">50</span>;
+        isBreached = <span class="hljs-literal">false</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">fireArchers</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (isBreached) <span class="hljs-keyword">return</span>;
+
+        <span class="hljs-comment">// Ox atmaq cəhdi</span>
+        <span class="hljs-keyword">if</span> (arrows &gt;= <span class="hljs-number">10</span>) {
+            arrows -= <span class="hljs-number">10</span>;
+            enemies -= <span class="hljs-number">10</span>;
+            <span class="hljs-keyword">if</span> (enemies &lt; <span class="hljs-number">0</span>) {
+                enemies = <span class="hljs-number">0</span>;
+            }
+        }
+        
+        <span class="hljs-comment">// Düşmən cavabı (Ox atsaq da, atmasaq da)</span>
+        wallIntegrity -= <span class="hljs-number">5</span>;
+        
+        <span class="hljs-keyword">if</span> (wallIntegrity &lt;= <span class="hljs-number">0</span>) {
+            wallIntegrity = <span class="hljs-number">0</span>; <span class="hljs-comment">// Mənfi olmaması üçün</span>
+            isBreached = <span class="hljs-literal">true</span>;
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">pourOil</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (isBreached) <span class="hljs-keyword">return</span>;
+
+        <span class="hljs-keyword">if</span> (gold &gt;= <span class="hljs-number">20</span>) {
+            gold -= <span class="hljs-number">20</span>;
+            enemies -= <span class="hljs-number">25</span>;
+            
+            <span class="hljs-keyword">if</span> (enemies &lt; <span class="hljs-number">0</span>) {
+                enemies = <span class="hljs-number">0</span>;
+            }
+            <span class="hljs-comment">// Bu metodda düşmən divara vura bilmir</span>
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">repairWall</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (isBreached) <span class="hljs-keyword">return</span>;
+
+        <span class="hljs-keyword">if</span> (gold &gt;= <span class="hljs-number">10</span>) {
+            gold -= <span class="hljs-number">10</span>;
+            
+            <span class="hljs-comment">// Təmir</span>
+            wallIntegrity += <span class="hljs-number">15</span>;
+
+            <span class="hljs-comment">// Ustalar işləyərkən düşmən atəşi</span>
+            wallIntegrity -= <span class="hljs-number">5</span>;
+
+            <span class="hljs-comment">// Limitlər</span>
+            <span class="hljs-keyword">if</span> (wallIntegrity &gt; <span class="hljs-number">100</span>) {
+                wallIntegrity = <span class="hljs-number">100</span>;
+            }
+            
+            <span class="hljs-comment">// Nadir hal: əgər təmir az, zərər çox olarsa</span>
+            <span class="hljs-keyword">if</span> (wallIntegrity &lt;= <span class="hljs-number">0</span>) {
+                isBreached = <span class="hljs-literal">true</span>;
+            }
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">scoutBattlefield</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (isBreached) <span class="hljs-keyword">return</span>;
+
+        <span class="hljs-comment">// Resurs toplamaq</span>
+        arrows += <span class="hljs-number">20</span>;
+        gold += <span class="hljs-number">20</span>;
+
+        <span class="hljs-comment">// Qapılar açıldığı üçün ağır zərbə</span>
+        wallIntegrity -= <span class="hljs-number">15</span>;
+
+        <span class="hljs-keyword">if</span> (wallIntegrity &lt;= <span class="hljs-number">0</span>) {
+            <span class="hljs-comment">// wallIntegrity = 0; // Opsional: 0-da saxlamaq</span>
+            isBreached = <span class="hljs-literal">true</span>;
+        }
+    }
+};</code></pre>
                             </div>
 
                         </div>
